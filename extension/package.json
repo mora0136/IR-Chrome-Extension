@@ -1,0 +1,35 @@
+{
+  "name": "ir-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "mkdir -p ./build/prod && webpack --config ./webpack/webpack.config.prod.js",
+    "build-dev": "mkdir -p ./build/dev && webpack --config ./webpack/webpack.config.dev.js",
+    "lint": "eslint src/js",
+    "test": "mocha-webpack --watch --webpack-config extension/webpack/webpack.config.test.js \\\\\\\"extension/src/js/**/*.spec.js\\\\\\\"",
+    "test:ci": "mocha-webpack --webpack-config extension/webpack/webpack.config.test.js \\\\\\\"extension/src/js/**/*.spec.js\\\\\\\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mora0136/IR-Chrome-Extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mora0136/IR-Chrome-Extension/issues"
+  },
+  "homepage": "https://github.com/mora0136/IR-Chrome-Extension#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.0",
+    "babel-loader": "^8.2.2",
+    "chalk": "^4.1.1",
+    "copy-webpack-plugin": "^8.1.1",
+    "lodash": "^4.17.21",
+    "webpack": "^5.36.2",
+    "webpack-version-file-plugin": "^0.4.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.6.0"
+  }
+}
