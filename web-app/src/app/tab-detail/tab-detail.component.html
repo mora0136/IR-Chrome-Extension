@@ -1,0 +1,13 @@
+<div class="example-box" (dblclick)="ondbClick(tab)">
+  <div class="tab-title">
+    <img src="{{tab.favIconUrl}}" width="20" height="20" style="padding-right: 5px">{{tab.title}}
+  </div>
+  <div class="tab-background" style="background: url({{tab.screenshot}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+</div>
+
+<h1>Likely author: {{tabDetails.person.text}}</h1>
+<h1>Likely date: {{tabDetails.date.text}}</h1>
+<h3>We found this by finding the closest pair of date and person</h3>
+<p></p>
+<h2>Other Likely Pages</h2>
+<h3 *ngFor="let page of tabDetails.nearestPage">{{page.url}} with rank of {{page.pageRank}}</h3>

@@ -1,0 +1,6 @@
+<div *ngFor="let tab of tabs" class="example-box" cdkDrag (click)="onClick(tab)" (cdkDragEnded)="onDragEnd($event)" [cdkDragData]="tab" (cdkDragStarted)="onDragStart($event)"[cdkDragFreeDragPosition]="{x:tab.x, y:tab.y}" (dblclick)="ondbClick(tab)">
+  <div class="tab-title">
+    <img src={{tab.favIconUrl}} width="20" height="20" style="padding-right: 5px">{{tab.title}}
+  </div>
+  <div class="tab-background" style="background: url({{tab.screenshot}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+</div>

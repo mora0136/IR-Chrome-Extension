@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crawler-request": "^1.2.2",
+    "express": "^4.17.1",
+    "jssoup": "0.0.12",
+    "lda-topic-model": "^1.1.0",
+    "mongodb": "^3.6.6",
+    "natural": "^5.0.3",
+    "nlpcloud": "^1.0.9",
+    "package-js": "^1.0.0",
+    "pagerank-js": "^0.3.0",
+    "pdf-parse": "^1.1.1",
+    "request": "^2.88.2"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dbStart": "mongod --dbpath=./data",
+    "apiStart": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
