@@ -3,12 +3,12 @@ import {Tab} from "./tab";
 import {HttpClient, HttpHeaders, HttpParamsOptions} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {TabDetails} from "./tabDetails";
-
+import { environment } from './../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class TabService {
-  private baseUrl = 'http://localhost:8088/api/'
+  private baseUrl = environment.apiUrl
   private httpOptions = {
     headers:{
       'Content-Type': 'application/json'

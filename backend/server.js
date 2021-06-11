@@ -287,7 +287,7 @@ client.connect(async function(err) {
             for(let date of listOfIdentifiesDateEntities){
                 let difference = Math.abs(person.end - date.start)
                 if(difference < shortestDistance.difference){
-                    shortestDistance ={
+                    shortestDistance = {
                         person: person,
                         date: date,
                         difference: difference,
