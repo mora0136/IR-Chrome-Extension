@@ -1,0 +1,14 @@
+<div *ngFor="let group of groupKeys" class="example-container">
+  <h2>{{group}}</h2>
+
+  <div
+    cdkDropList
+    class="example-list">
+    <div *ngFor="let tab of groups[group]" class="example-box" cdkDrag (dblclick)="onClick(tab)">
+      <div class="tab-title">
+        <img src={{tab.favIconUrl}} width="20" height="20">{{tab.title}}
+      </div>
+      <div class="tab-background" style="background: url({{tab.screenshot}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+    </div>
+  </div>
+</div>

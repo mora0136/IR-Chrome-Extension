@@ -1,0 +1,14 @@
+<form class="example-form" (submit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search for term and we will sort your tabs by tfidf</mat-label>
+    <input [(ngModel)]="search" [ngModelOptions]="{standalone: true}" matInput placeholder="Ex. Pizza" value="Sushi">
+  </mat-form-field>
+  <button type="submit">Search</button>
+</form>
+
+<div *ngFor="let tab of tabs" class="example-box" cdkDrag (cdkDragEnded)="onDragEnd($event)" [cdkDragData]="tab" (cdkDragStarted)="onDragStart($event)" (dblclick)="onClick(tab)">
+  <div class="tab-title">
+    <img src={{tab.favIconUrl}} width="20" height="20" style="padding-right: 5px">{{tab.title}}
+  </div>
+  <div class="tab-background" style="background: url({{tab.screenshot}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+</div>
